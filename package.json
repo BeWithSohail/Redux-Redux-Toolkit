@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "react-redux": "^9.1.1"
+    "bootstrap-icons": "^1.11.3"
   }
 }

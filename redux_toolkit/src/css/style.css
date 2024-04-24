@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+ 
+body{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .input-container {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    width: 450px;
+    margin: auto;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-item.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  button {
+    margin-left: auto;
+    background-color: #dc3545;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
