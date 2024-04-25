@@ -58,6 +58,8 @@ Well to make interesting , we will learn redux toolkit along with making a simpl
 
 Let’s start.
 
+https://whataboutcoding.com/redux-toolkit-tutorial/#Step_2_%E2%80%93_Create_a_global_store
+
 Step 1 – Install Redux and Redux Toolkit package in an react app
 Thankgod✌️ we only need two packages now , so go ahead and install these two.
 
@@ -68,8 +70,11 @@ Create src/app/store.js –
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
+
   reducer: {},
+  
 });
+
 configureStore accepts a single object rather that multiple function arguments. It’s because under the hood, the store has been configured to allow using the Redux DevTools Extension and has had some Redux middleware included by default.
 
 Step 3 – Providing store to complete react app
