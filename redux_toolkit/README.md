@@ -40,31 +40,32 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 
-What is state in React Js
+### What is state in React Js
 The state is a built-in React object that is used to contain data or information about the component.
 
-Why do we need redux ?
+### Why do we need redux ?
 Redux allows you to manage your app’s state in a single place and keep changes in your app more predictable and traceable.
 
-What Pain does redux solves
+### What Pain does redux solves
 Redux is a global state
 Redux is not necessary for every project.
 You may need Redux if you don’t want to do props drilling (passing props too deep).
 If you are still confused about Redux, just think about the React state. The only difference is you can access the state from anywhere.
 
-Redux Toolkit Working Flow
+### Redux Toolkit Working Flow
 Let’s Build an Redux App
 Well to make interesting , we will learn redux toolkit along with making a simple counter application.
 
-Let’s start.
+### Let’s start.
 
-https://whataboutcoding.com/redux-toolkit-tutorial/#Step_2_%E2%80%93_Create_a_global_store
+### https://whataboutcoding.com/redux-toolkit-tutorial/#Step_2_%E2%80%93_Create_a_global_store
 
-Step 1 – Install Redux and Redux Toolkit package in an react app
+### Step 1 – Install Redux and Redux Toolkit package in an react app
 Thankgod✌️ we only need two packages now , so go ahead and install these two.
 
 npm install --save react-redux @reduxjs/toolkit
-Step 2 – Create a global store
+
+### Step 2 – Create a global store
 Create src/app/store.js –
 
 import { configureStore } from "@reduxjs/toolkit";
@@ -77,7 +78,8 @@ export const store = configureStore({
 
 configureStore accepts a single object rather that multiple function arguments. It’s because under the hood, the store has been configured to allow using the Redux DevTools Extension and has had some Redux middleware included by default.
 
-Step 3 – Providing store to complete react app
+### Step 3 – Providing store to complete react app
+
 This will provide store globally.
 
 Go to src/index.js :
@@ -110,7 +112,7 @@ Provider wraps the App and the whole application has access to redux store.
 
 Now check your redux dev tool
 
-Step 4 – Now lets create a slice
+### Step 4 – Now lets create a slice
 
 A function that accepts an initial state, an object of reducer functions, and a “slice name”, and automatically generates action creators and action types that correspond to the reducers and state.
 
@@ -158,7 +160,7 @@ export const { increment, decrement } = counterSlice.actions;
 
 export default counterSlice.reducer;
 
-Step 5 – Add Slice Reducers to the Store
+### Step 5 – Add Slice Reducers to the Store
 
 import { configureStore } from "@reduxjs/toolkit";
 
@@ -170,7 +172,7 @@ export const store = configureStore({
   
 });
 
-Step 6 – Implementing useSelector and useDispatch in React Components
+### Step 6 – Implementing useSelector and useDispatch in React Components
 
 Components/Counter.js
 
@@ -209,20 +211,20 @@ Conclusion
 
 Frankly , redux is more of a flow which you need to follow instead of trying hard to understand each and every logic .
 
-Final Summary –
+### Final Summary –
 
 When we click on the button, we call a function , which in reducer term means that we have dispatched an action. Now that dispatched action will call a reducer function , where all the logic’s are written , and this reducer function will update the slice of the redux store
 
-Lets revise all the steps again –
+### Lets revise all the steps again –
 
-Step 1 – Install the redux and react-redux package
+### Step 1 – Install the redux and react-redux package
 
-Step 2 – Create a store
+### Step 2 – Create a store
 
-Step 3 – Providing store globally
+### Step 3 – Providing store globally
 
-Step 4 – Creating slices (i.e reducers) , where all the major logics are performed
+### Step 4 – Creating slices (i.e reducers) , where all the major logics are performed
 
-Step 5 – Receiving action from UI (using useDispatch hook) and receiving data from global store to fronted (using useSelector hook).
+### Step 5 – Receiving action from UI (using useDispatch hook) and receiving data from global store to fronted (using useSelector hook).
 Hope you guys found the article helpful.
 
